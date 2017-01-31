@@ -45,5 +45,23 @@ $(function(){
     });
     $("#refresh").click(function(){
         fetchWeatherFromAPI();
+        
     });
+    $('#g01-01').on('change',function(){
+    var_val = $(this).is(':checked') ? 'checked' : 'unchecked';
+    console.log(var_val);
+    if (var_val === "unchecked"){
+        console.log("ssssaz");
+    }
+    else
+     
+     {
+         console.log("ssssaz22222222222");
+         setInterval(function(){ fetchWeatherFromAPI() }, 60000);
+     }
+    //setTimeout(function(){ fetchWeatherFromAPI() }, 3000);
+    
 });
+})
+
+
