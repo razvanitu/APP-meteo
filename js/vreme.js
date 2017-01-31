@@ -3,6 +3,13 @@ var cel = true;
 var wd;
 var loc = "45.78,24.15".split(',');
 
+if("geolocation" in navigator)
+{
+
+    navigator.geolocation.getCurrentPosition(function(position){
+    
+});
+}
 function displayTemp (fTemp, c){
   if(c) return Math.round((fTemp -32)* (5/9)) + " C";
   return Math.round(fTemp) + "F"
