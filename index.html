@@ -1,24 +1,49 @@
 <html>
-<body>
+  <head>
+    <title>Weather App</title>
 
-    <div class= "left">
-        <h1 id="currentLocation" style= "color:darkgreen">Get location</h1>
-    </div>
+    <script type="text/javascript" src="vreme.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
 
-    <div id="container">
-        <h2 class ="center-text content-title" id='currentTemp'></h2>
-        <p><a href="#" id="toggle"style="font-size:12pt;color:red"> Schimba C/F </a></p>
-        <button><a href="#" id="refresh"style="font-size:10pt;color:white;background-color:green;"> Refresh </a></button>
-        <div class="content-body">
-            <p class="center-text" style="font-size:9pt;color:blue"id='high-low'></p>
-            <p class="center-text" id='currentWeather'></p>
-            <form>
-    Timeout<input type="checkbox" name="checkfield" id="g01-01" >
-         </form>
-        </div>
-    </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js" ></script>      
-    <script src="js/vreme.js"></script>     
-</body>
+    <div class="weather-app">
+      <div class="left">
+				<div class="temperature"><span id="temperature">0</span>&deg;</div> 
+				<div class="location"><span id="location">Unknown</span></div> </br>
+				
+				<div id="conditions"></div>
+			</div>	
+			<div class="right">
+					<div class="top">
+						<img id="icon" width="75px" src="imgs/codes/200.png" />
+					</div>
+
+					<div class="bottom">
+
+						<div class="humidity">
+	    <img src="imgs/humidity.png" height="16px" />
+	    <span id="humidity">0</span>%
+	  </div>
+						
+						<div class="wind">
+							<span id="wind"></span> km/h 
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		
+	</body>
 </html>
+
+
+  <!--</div>
+			<div id="container">	
+			<p><a href="#" id="toggle"style="font-size:12pt;color:red"> Schimba C/F </a></p>
+			
+        <button><a href="#" id="refresh"style="font-size:10pt;color:white;background-color:green;"> Refresh </a></button>
+				
+				Timeout<input type="checkbox" name="checkfield" id="g01-01" >
+				</div> -->
+				<!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
